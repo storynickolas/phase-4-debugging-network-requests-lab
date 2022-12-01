@@ -63,11 +63,26 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+    -Add byebug to create in toys_controller
+    -see if toy_params returns what it should from the form
+    -NameError (uninitialized constant ToysController::Toys):
+    -Change Toys to Toy
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    -Try like button on rendered page - error Unexpected end of JSON input
+    -Add byebug to update in toys_controller
+    -No render following successful update
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    -Try donate button on rendered page - error Not Found
+    -Add byebug to delete in toys_controller
+    -No route matches [DELETE]
+    -Add destroy in routes.rb
+    -Try donate button on rendered page - success
+
+
+
